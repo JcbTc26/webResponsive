@@ -1,0 +1,344 @@
+@media screen and (min-width: 480px){
+     .textoMenu{
+            width: 100%;
+            height: 100%;
+            font-size: 1rem;
+            margin: 0.5rem;
+        }
+
+        #tituloWeb {
+            text-align: center;
+            font-size: clamp(3rem, 4vw, 4rem);
+        }
+         #subtitulo {
+            text-align: center;
+            margin-top: 0.2rem;
+            font-size: clamp(1rem, 3vw, 4rem);
+
+        }
+         #contenedorLogos{
+            min-width: 50%;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            gap: 3rem;
+        }
+
+}
+
+/* MENU OCULTO HAMBURGUESA */
+
+  @media screen and (max-width: 500px){
+            .menuSup2 label{
+                display: flex;
+            }
+            .separador{
+                display: none;
+            }
+
+             .menuSuperior2{
+            font-size: 2rem;
+            text-transform: uppercase;
+            display: none;
+            position: relative;
+            top: 0;
+            left: 0;
+            width: fit-content;
+            flex-direction: column;
+            background-color: gray;
+            padding: 1rem 0;
+        }
+             #menuHam:checked ~ .menuSuperior2{
+           display: flex;
+        }
+        }
+
+@media screen and (min-width: 768px){
+    /* CABECERA*/
+
+    /* menu superior */
+        #menuSuperior{
+            gap: 2rem;
+            
+        }
+        .textoMenu{
+            width: 100%;
+            height: 100%;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+
+        #tituloWeb {
+            text-align: center;
+            font-size: clamp(3rem, 6vw, 5rem);
+            margin-top: 3rem;
+        }
+         #subtitulo {
+            text-align: center;
+            font-size: clamp(1.7rem, 3vw, 4rem);
+        }
+
+
+
+    /* CUERPO */
+      #cuerpo {
+            width: 100%;
+            min-height: 50vh;
+            background-color: var(--color-superficie);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            gap: 10px;
+        }
+
+        /* CONTENEDOR FOTOS */
+         #contenedorFotos{
+            display: flex;
+            flex-direction: row;
+        }
+
+         .fotoMovil{
+            max-width: 50%;
+            border-radius: 50px;
+            padding: 1.5rem;
+        }
+
+        #contenedorCta,
+        #contenedorFoto {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(82, 82, 82);
+            border: 2px var(--color-borde) solid;
+            padding: 1.5rem;
+            gap: 10px;
+            border-radius: 0.5rem;
+            box-shadow: 0 5px 10px gray;
+        }
+        #botonCta,
+        .botonFoto {
+            padding: 1rem 2rem;
+            border: 1px solid var(--color-borde);
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.08rem;
+        }
+
+        /* textos contedores centrales */
+
+        #tituloCta,
+        #tituloFoto {
+            width: 100%;
+            font-size: 2.5rem;
+        }
+
+        #textoCta,
+        #textoFoto {
+            width: 100%;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+
+        /* PIE DE WEB */
+
+         #pieWeb {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:1rem;
+            background-color: var(--color-fondo);
+            padding: 2rem;
+        }
+        #acordeonPie{
+            font-size: 2.5rem;
+        }
+        #textoMenuInf{
+            font-size: 2rem;
+
+        }
+      
+        #menuInferior{
+            list-style: none;
+            text-align: left;
+            margin: 2rem;
+        }
+        /* logos redes */
+        #separadorPie{
+            width: 40%;
+            height: 1px;
+            background-color: var(--color-texto-suave);
+           
+        }
+        #textoRedes{
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+        }
+   
+    
+        #textoPie{
+            text-align: center;
+            font-size: 0.8rem;    
+        }
+        
+
+
+        
+}
+
+@media (min-width: 1024px){
+     /* CABECERA*/
+
+    /* menu superior */
+        .textoMenu{
+            width: 100%;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        #tituloWeb {
+            text-align: center;
+            margin-top: 5rem;
+            font-size: clamp(4rem, 4vw, 5rem);
+        }
+        #subtitulo {
+            text-align: center;
+            font-size: clamp(1.5rem, 3vw, 4rem);
+            margin: 2rem;
+        }
+        
+
+
+    /* CUERPO */
+
+
+
+        /* CONTENEDOR FOTOS */
+        #contenedorFotos{
+            display: flex;
+            justify-content: center;
+        }
+
+        .fotoMovil{
+            max-width: 50%;
+            border-radius: 80px;
+            padding: 2.5rem;
+        }
+
+        #contenedorCta,
+        #contenedorFoto {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(82, 82, 82);
+            border: 2px var(--color-borde) solid;
+            padding: 2rem;
+            gap: 10px;
+            border-radius: 0.5rem;
+            box-shadow: 0 5px 10px gray;
+        }
+
+        /* textos contedores centrales */
+
+        #tituloCta,
+        #tituloFoto {
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 4rem;
+        }
+
+        #textoCta,
+        #textoFoto {
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 1.7rem;
+        }
+
+
+
+
+        /* PIE DE WEB */
+        
+         #pieWeb {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:1.5rem;
+            background-color: var(--color-fondo);
+            padding: 2rem;
+        }
+        #acordeonPie{
+            font-size: 1.2rem;
+        }
+        #textoMenuInf{
+            width: 100%;
+            font-size: 1.5rem;
+            text-align: center;
+
+        }
+      
+        #menuInferior{
+            list-style: none;
+            text-align: left;
+            margin: 2rem;
+        }
+        /* logos redes */
+        #separadorPie{
+            width: 20%;
+            height: 1px;
+            background-color: var(--color-texto-suave);
+           
+        }
+        #textoRedes{
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+        }
+        #contenedorLogos{
+            min-width: 70%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #logosRedes{
+            width:2rem;
+            height:2rem;
+            margin: -2rem;
+        }
+        #textoPie{
+            text-align: center;
+            font-size: 1rem;    
+        }
+
+    
+}
+@media (min-width: 1440px){
+
+    
+        #logosWeb{
+            width: 100rem;
+            height: auto;
+        }
+    
+}
+
+
+@media (orientation: landscape) and (max-width: 480px){
+  #cabecera{
+        min-height: 80svh;
+        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        gap: 2rem;
+}
+
+
+}

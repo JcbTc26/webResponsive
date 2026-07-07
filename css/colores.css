@@ -1,0 +1,17 @@
+:root{
+  --color-fondo: #f7f3ea;
+  --color-superficie: #ffffff;
+
+  --color-primario: #123c2d;
+  --color-primario-suave: #dcebdd;
+
+  --color-secundario: #8b6f47;
+  --color-acento: #d96c3d;
+  --color-acento-hover: #b9552f;
+
+  --color-texto: #1f2933;
+  --color-texto-suave: #6b7280;
+
+  --color-borde: #e2d6c2;
+  --color-sombra: rgba(18, 60, 45, 0.15);
+}
