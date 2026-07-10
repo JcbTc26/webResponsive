@@ -94,19 +94,28 @@
         </details>
 
         <!-- ------FORMULARIO DE REGISTRO------ -->
-        <section class="contenedorFormulario">
-            <p class="textoFormWeb">Suscríbete para recibir novedades</p>
-            <form action="" class="FormularioPieWeb">
-                <label for=""></label>
-                <input type="email"
-                id="email"
-                name="email"
-                placeholder="Tu correo"
-                required>
-                <button type="submit" class="botonForm">ENVIAR</button>
-            </form>
-        </section>
+       <section class="contenedorFormulario" aria-labelledby="titulo-suscripcion">
+        <p id="titulo-suscripcion" class="textoFormWeb">
+        Suscríbete para recibir novedades
+         </p>
 
+            <form class="FormularioPieWeb" action="/suscripcion" method="post">
+            <label for="email" class="sr-only">Correo electrónico</label>
+
+            <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Tu correo electrónico"
+            autocomplete="email"
+            required
+            >
+
+            <button type="submit" class="botonForm">
+            Enviar
+            </button>
+             </form>
+        </section>
         <!-- -------BLOQUE REDES SOCIALES---- -->
         
         <p id="textoRedes">Síguenos en redes</p>

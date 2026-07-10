@@ -10,7 +10,7 @@
 
         body {
             
-            width: 100vw;
+            width: 100%;
             /* overflow: hidden; */
             font-family: "Roboto Mono", monospace;
             font-optical-sizing: auto;
@@ -65,10 +65,10 @@
         #menuHam:checked+label span:nth-child(1) {
             transform: translateY(0.55rem) rotate(45deg);
         }
-          #menuHam:checked+label span:nth-child(2) {
+        #menuHam:checked+label span:nth-child(2) {
             opacity: 0;
         }
-          #menuHam:checked+label span:nth-child(3) {
+        #menuHam:checked+label span:nth-child(3) {
             transform: translateY(-0.55rem) rotate(-45deg);
         }
       
@@ -159,14 +159,10 @@
             backdrop-filter: blur(6px);
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
         }
-         .logosConfianza{
-            max-width: 1rem;
-        }
-
- 
+    
        
         /* -----EFECTOS LINK MENUS--- */
-          a {
+        a {
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
 
@@ -283,10 +279,11 @@
         }
         /* ESTILOS PIE DE PAGINA */
         #pieWeb {
+            max-width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.1rem;
+            gap: 1rem;
             background-color: var(--color-fondo);
         }
 
@@ -295,7 +292,8 @@
         #contenedorMenu{
             list-style: none;
         }
-         #contenedorMenu:hover{
+
+        #contenedorMenu:hover{
             color: gray;
         }
         
