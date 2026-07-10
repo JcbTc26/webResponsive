@@ -1,155 +1,362 @@
- body{
+/* ---------- RESET GENERAL ---------- */
+*,
+*::before,
+*::after {
     margin: 0;
-    height: 100%;
- }
- body{
-    height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- VARIABLES GENERALES ---------- */
+:root {
+    --color-fondo: #dfdfdf;
+    --color-superficie: #ffffff;
+    --color-texto: #111111;
+    --color-sombra: rgba(0, 0, 0, 0.35);
+    --ancho-formulario: 650px;
+}
+
+/* ---------- DOCUMENTO GENERAL ---------- */
+html {
+    width: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
     display: grid;
-    grid-template-rows: 10% 70% 20%;
- }
- /* ------MENU SUPERIOR LANDING---- */
-   #menuSupLanding {
-            width: 100%;
-            padding: 0.1rem;
-            background: rgba(255, 255, 255, 0.836);
-            color: var(--color-superficie);
-            display: flex;
-            align-items: center;
-            /* position: sticky; */
-            border-radius: 5px;
-            top: 5px;
-            box-shadow: 0 5px 10px gray;
-        }
- 
- 
- /* -------ESTILOS LADING------- */
-        #landingWeb {
-            width: 100%;
-            height: 8vh;
-            padding: 0.5rem;
-            background-color: rgb(231, 231, 231);
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
+    grid-template-rows: auto 1fr auto;
+    overflow-x: hidden;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-           #pieWebLanding {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.1rem;
-            background-color: var(--color-fondo);
-        }
+/* ---------- CABECERA LANDING ---------- */
+#landingWeb {
+    width: 100%;
+    min-height: 8rem;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgb(231, 231, 231);
+}
 
+/* ---------- MENÚ SUPERIOR LANDING ---------- */
+#menuSupLanding {
+    width: 100%;
+    min-height: 3.5rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.836);
+    color: var(--color-texto);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(128, 128, 128, 0.65);
+}
 
+/* ---------- CUERPO PRINCIPAL LANDING ---------- */
+.cuerpoContacto {
+    width: 100%;
+    min-width: 0;
+    padding: clamp(1rem, 3vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        /* CUERPO LADING */
-        .cuerpoContacto{
-                width: 100%;
-        }
+/* ---------- TÍTULO LANDING ---------- */
+#tituloLanding {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: clamp(1rem, 4vw, 4rem);
+    padding: 0 clamp(1rem, 5vw, 4rem);
+    text-align: center;
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    line-height: 1.15;
+    text-shadow: 0 6px 6px rgba(128, 128, 128, 0.65);
+}
 
+/* ---------- PÁRRAFO LANDING ---------- */
+#parrafoLanding {
+    width: 100%;
+    max-width: 850px;
+    margin: 1rem auto 0.5rem;
+    padding: 0 clamp(1rem, 5vw, 4rem);
+    text-align: center;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.6;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
 
-        /* ----TITULOS LANDING----- */
-       
+/* ---------- CONTENEDOR DEL FORMULARIO ---------- */
+.contenedorFormularioLanding {
+    width: 100%;
+    padding: clamp(1rem, 4vw, 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    #tituloLanding{
-        width: 100%;
-        margin-top:5rem;
-        padding: 0 4rem;
-        text-align: center;
-        text-shadow: 0 10px 6px grey;
+/* ---------- FORMULARIO LANDING ---------- */
+#FormLanding {
+    width: min(100%, var(--ancho-formulario));
+    padding: clamp(1rem, 4vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    background-color: var(--color-superficie);
+    border-radius: 10px;
+    box-shadow: 0 5px 12px var(--color-sombra);
+}
+
+/* ---------- TEXTO DEL FORMULARIO ---------- */
+.formularioTexto {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    line-height: 1.4;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* ---------- BLOQUES DEL FORMULARIO ---------- */
+.bloq1,
+.bloq2,
+.bloq3,
+.bloq4,
+.bloq5 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(120px, 0.8fr) minmax(0, 2fr);
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* ---------- ETIQUETAS DEL FORMULARIO ---------- */
+.formulario {
+    width: 100%;
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+    text-align: right;
+    line-height: 1.3;
+}
+
+/* ---------- CAMPOS DEL FORMULARIO ---------- */
+.formularioEnviar {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    min-height: 2.5rem;
+    padding: 0.65rem 0.75rem;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    text-align: left;
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+    font-family: inherit;
+    outline: none;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* ---------- CAMPOS DEL FORMULARIO EN FOCO ---------- */
+.formularioEnviar:focus {
+    border-color: #555555;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- ÁREA DE TEXTO ---------- */
+textarea.formularioEnviar {
+    min-height: 7rem;
+    resize: vertical;
+}
+
+/* ---------- BOTÓN LANDING ---------- */
+#botonLanding {
+    width: 100%;
+    min-height: 2.8rem;
+    padding: 0.8rem 1.5rem;
+    margin-top: 0.5rem;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* ---------- EFECTO DEL BOTÓN ---------- */
+#botonLanding:hover {
+    background-color: #333333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+    transform: translateY(-2px);
+}
+
+/* ---------- BOTÓN ACTIVO ---------- */
+#botonLanding:active {
+    transform: translateY(0);
+}
+
+/* ---------- BARRA DE PROMOCIÓN LANDING ---------- */
+.barradaPromoLandig {
+    width: 100%;
+    min-height: 3.5rem;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+/* ---------- TEXTO DE PROMOCIÓN ---------- */
+.textoPromo {
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    line-height: 1.4;
+}
+
+/* ---------- TEXTO DESTACADO DE PROMOCIÓN ---------- */
+.textoPromo span {
+    color: red;
+    font-weight: 800;
+}
+
+/* ---------- PIE DE PÁGINA LANDING ---------- */
+#pieWebLanding {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--color-fondo);
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 768px) {
+    /* ---------- MENÚ SUPERIOR TABLET ---------- */
+    #menuSupLanding {
+        padding: 0.5rem 0.75rem;
     }
-    #parrafoLanding{
-        width: 100%;
-        font-size: 1rem;
-        text-align: center;
-        padding: 0 4rem;
-        margin-bottom: 0.5rem;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    /* ---------- TÍTULO TABLET ---------- */
+    #tituloLanding {
+        margin-top: 1.5rem;
     }
 
+    /* ---------- FORMULARIO TABLET ---------- */
+    #FormLanding {
+        width: min(100%, 560px);
+    }
 
-    /* -----FORMULARIO LANDING------ */
-
-    .contenedorFormularioLanding{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 2rem;
-        text-align: center;
-    
-    }
-    #FormLanding{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: 60%;
-        text-align: left;
-        background-color: rgb(255, 255, 255);
-        padding: 1rem;
-        border-radius: 10px;
-        box-shadow: 0 5px 8px black;
-
-    }
-    .formulario{
-        text-align: left;
-        width: 20%;
-        font-size: 0.8rem;
-    }
-    
-    .formularioEnviar{
-        width: 40%;
-        color: black;
-        font-size: 0.5rem;
-        max-width: 50%;
-        border: 1px black solid;
-        border-radius: 3px;
-        text-align: left;
-        font-size: 0.8rem;
-    }
-    .formularioTexto{
-        font-size: 1rem;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-    }
-    .bloq1, 
+    /* ---------- BLOQUES DEL FORMULARIO TABLET ---------- */
+    .bloq1,
     .bloq2,
     .bloq3,
     .bloq4,
     .bloq5 {
-        width: 100%;
-        text-align: right;
+        grid-template-columns: minmax(100px, 0.7fr) minmax(0, 1.8fr);
     }
-    
+}
 
-    #botonLanding{
-        width: 100%;
-        padding: 0.8rem 1.5rem;
-        margin-top: 10px;
-        text-align: center;
-        border-radius: 5px;
-        background-color: black;
-        font-size: 0.5rem;
-        color: rgb(255, 255, 255);
-        font-size: 0.8rem;
+/* ---------- MÓVIL ---------- */
+@media (max-width: 600px) {
+    /* ---------- CABECERA MÓVIL ---------- */
+    #landingWeb {
+        min-height: auto;
+        padding: 0.5rem;
     }
 
-    /*-------BARRA PROMOCION LANDING----- */
-    .barradaPromoLandig{
+    /* ---------- MENÚ SUPERIOR MÓVIL ---------- */
+    #menuSupLanding {
+        min-height: auto;
+        padding: 0.65rem;
+        flex-wrap: wrap;
+    }
+
+    /* ---------- CUERPO PRINCIPAL MÓVIL ---------- */
+    .cuerpoContacto {
+        padding: 1rem 0.75rem;
+    }
+
+    /* ---------- TÍTULO MÓVIL ---------- */
+    #tituloLanding {
+        margin-top: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    /* ---------- PÁRRAFO MÓVIL ---------- */
+    #parrafoLanding {
+        padding: 0 0.5rem;
+    }
+
+    /* ---------- CONTENEDOR DEL FORMULARIO MÓVIL ---------- */
+    .contenedorFormularioLanding {
+        padding: 1rem 0;
+    }
+
+    /* ---------- FORMULARIO MÓVIL ---------- */
+    #FormLanding {
         width: 100%;
-        min-height: 5vh;
-        background-color: black;
+        padding: 1rem;
+        border-radius: 8px;
     }
-    .textoPromo{
-        color: white;
-        text-align: center;
-        margin: 20px;
+
+    /* ---------- BLOQUES DEL FORMULARIO MÓVIL ---------- */
+    .bloq1,
+    .bloq2,
+    .bloq3,
+    .bloq4,
+    .bloq5 {
+        grid-template-columns: 1fr;
+        gap: 0.35rem;
     }
-    .textoPromo span{
-       font-weight: 800;
-       color: red;
+
+    /* ---------- ETIQUETAS DEL FORMULARIO MÓVIL ---------- */
+    .formulario {
+        text-align: left;
     }
-   
- 
+
+    /* ---------- CAMPOS DEL FORMULARIO MÓVIL ---------- */
+    .formularioEnviar {
+        min-height: 2.75rem;
+    }
+
+    /* ---------- BOTÓN MÓVIL ---------- */
+    #botonLanding {
+        min-height: 3rem;
+    }
+}
+
+/* ---------- MÓVILES PEQUEÑOS ---------- */
+@media (max-width: 360px) {
+    /* ---------- FORMULARIO EN MÓVILES PEQUEÑOS ---------- */
+    #FormLanding {
+        padding: 0.8rem;
+    }
+
+    /* ---------- TÍTULO EN MÓVILES PEQUEÑOS ---------- */
+    #tituloLanding {
+        font-size: 1.65rem;
+    }
+
+    /* ---------- TEXTO PROMOCIONAL EN MÓVILES PEQUEÑOS ---------- */
+    .textoPromo {
+        font-size: 0.75rem;
+    }
+}
