@@ -150,7 +150,8 @@
             flex-direction: column;
             align-items: center;
             gap:1rem;
-            background-color: var(--color-fondo);
+                background-color: var(--color-superficie-oscura);
+                color: white;
             padding: 2rem;
         }
         #acordeonPie{
@@ -271,7 +272,8 @@
             flex-direction: column;
             align-items: center;
             gap:1.5rem;
-            background-color: var(--color-fondo);
+                background-color: var(--color-superficie-oscura);
+                color: white;
             padding: 2rem;
         }
         #acordeonPie{

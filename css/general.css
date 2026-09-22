@@ -312,15 +312,16 @@
     
         .textoMenuInf{
             font-size: clamp(1.2rem, 2vw, 5rem);
-            color: rgb(34, 34, 34);
+            color: white;
             padding: 1rem;
             margin-top: 2rem;
-            text-shadow: 0 2px 5px black;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
 
         }
         #acordeonPie{
          font-size: clamp(1rem, 3vw, 5rem);
-         text-shadow: 0 2px 5px black;   
+         color: white;
+         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
          text-align: center;
          padding: 0.9rem;
          margin-top: 0.1rem;
@@ -349,6 +350,7 @@
         }
         .textoFormWeb{
             min-width: 60%;
+            color: var(--color-texto);
             font-size: 0.8rem;
             margin: 10px;
             text-align: center;
@@ -385,6 +387,7 @@
         }
         #textoRedes{
             width: 100%;
+            color: white;
             text-align: center;
             font-size: 0.8rem;
             margin-top: 0.5rem;
@@ -404,6 +407,7 @@
         }
         #textoPie{
             text-align: center;
+            color: rgba(255, 255, 255, 0.78);
             font-size: 0.5rem;
             padding: 0.5rem;    
         }
