@@ -1,17 +1,16 @@
-:root{
-  --color-fondo: #f7f3ea;
-  --color-superficie: #ffffff;
-
-  --color-primario: #123c2d;
-  --color-primario-suave: #dcebdd;
-
-  --color-secundario: #8b6f47;
-  --color-acento: #d96c3d;
-  --color-acento-hover: #b9552f;
-
-  --color-texto: #1f2933;
-  --color-texto-suave: #6b7280;
-
-  --color-borde: #e2d6c2;
-  --color-sombra: rgba(18, 60, 45, 0.15);
+:root {
+  --color-fondo: #f5f1ea;
+  --color-superficie: #fffdf9;
+  --color-superficie-oscura: #173f3a;
+  --color-primario: #173f3a;
+  --color-primario-suave: #dce9e2;
+  --color-secundario: #b58b5b;
+  --color-acento: #e47752;
+  --color-acento-hover: #c85c3a;
+  --color-texto: #1d2928;
+  --color-texto-suave: #62706c;
+  --color-borde: #d9e0d9;
+  --color-sombra: rgba(23, 63, 58, 0.16);
+  --radio: 1.25rem;
+  --ancho-contenido: 72rem;
 }

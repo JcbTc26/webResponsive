@@ -9,10 +9,13 @@
 
 /* ---------- VARIABLES GENERALES ---------- */
 :root {
-    --color-fondo: #dfdfdf;
-    --color-superficie: #ffffff;
-    --color-texto: #111111;
-    --color-sombra: rgba(0, 0, 0, 0.35);
+    --color-fondo: #f5f1ea;
+    --color-superficie: #fffdf9;
+    --color-texto: #1d2928;
+    --color-sombra: rgba(23, 63, 58, 0.16);
+    --color-primario: #173f3a;
+    --color-acento: #e47752;
+    --color-borde: #d9e0d9;
     --ancho-formulario: 650px;
 }
 
@@ -31,7 +34,7 @@ body {
     overflow-x: hidden;
     background-color: var(--color-fondo);
     color: var(--color-texto);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto Mono", monospace;
 }
 
 /* ---------- CABECERA LANDING ---------- */
@@ -42,7 +45,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: rgb(231, 231, 231);
+    background: linear-gradient(135deg, #173f3a, #2e655b);
 }
 
 /* ---------- MENÚ SUPERIOR LANDING ---------- */
@@ -112,7 +115,8 @@ body {
     align-items: stretch;
     gap: 1rem;
     background-color: var(--color-superficie);
-    border-radius: 10px;
+    border: 1px solid var(--color-borde);
+    border-radius: 1.25rem;
     box-shadow: 0 5px 12px var(--color-sombra);
 }
 
@@ -185,7 +189,7 @@ textarea.formularioEnviar {
     padding: 0.8rem 1.5rem;
     margin-top: 0.5rem;
     color: white;
-    background-color: black;
+    background-color: var(--color-acento);
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
@@ -200,7 +204,7 @@ textarea.formularioEnviar {
 
 /* ---------- EFECTO DEL BOTÓN ---------- */
 #botonLanding:hover {
-    background-color: #333333;
+    background-color: #c85c3a;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
     transform: translateY(-2px);
 }
@@ -218,7 +222,7 @@ textarea.formularioEnviar {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: var(--color-primario);
 }
 
 /* ---------- TEXTO DE PROMOCIÓN ---------- */
@@ -232,7 +236,7 @@ textarea.formularioEnviar {
 
 /* ---------- TEXTO DESTACADO DE PROMOCIÓN ---------- */
 .textoPromo span {
-    color: red;
+    color: #ffd29f;
     font-weight: 800;
 }
 

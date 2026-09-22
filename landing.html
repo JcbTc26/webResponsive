@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="/css/responsivo.css">
-    <link rel="stylesheet" href="/css/colores.css">
-    <link rel="stylesheet" href="/css/estilosLanding.css">
+    <link rel="stylesheet" href="css/colores.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="stylesheet" href="css/estilosLanding.css">
 </head>
 <style>
     
@@ -23,8 +23,8 @@
         <!-------MENU NAVAGACIÓN------>
      
         <nav class="menuSup2 menuSup">    
-                <a href="/index.html">
-                    <img src="/img/logo CaseNova.png" alt="Logo-CaseNova" id="logoWeb">
+                <a href="index.html">
+                    <img src="img/logo CaseNova.png" alt="Logo de CaseNova" id="logoWeb">
                 </a> 
             <input type="checkbox" id="menuHam">
             <label for="menuHam">
@@ -33,11 +33,11 @@
                 <span></span>
             </label>
             <ul class=" menuSuperior2">
-                <li><a href="/index.html#cabecera" class="textoMenuH">Inicio</a></li>
+                <li><a href="index.html#cabecera" class="textoMenuH">Inicio</a></li>
                 <li class="separador">|</li>
-                <li><a href="/index.html#cuerpo" class="textoMenuH">Productos</a></li>
+                <li><a href="index.html#cuerpo" class="textoMenuH">Productos</a></li>
                 <li class="separador">|</li>
-                <li><a href="/index.html#pieWeb" class="textoMenuH">Contacto</a></li>
+                <li><a href="index.html#pieWeb" class="textoMenuH">Contacto</a></li>
             </ul>
        </nav> 
        </header>
@@ -53,20 +53,20 @@
            <section class="contenedorFormularioLanding">    
             <form action="" id="FormLanding">
                 <section class="bloq1">
-                    <label for="submit" class="formularioTexto">Tu nombre</label>
-                    <input type="text" class="formulario formularioEnviar"  placeholder=" nombre">
+                    <label for="nombre" class="formularioTexto">Tu nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="formularioEnviar" placeholder="Tu nombre" autocomplete="name" required>
                 </section>
                  <section class="bloq2">
-                     <label for="submit" class="formularioTexto">Tu email</label>
-                     <input type="email" class="formulario formularioEnviar"  placeholder=" email">
+                     <label for="emailLanding" class="formularioTexto">Tu email</label>
+                     <input type="email" id="emailLanding" name="email" class="formularioEnviar" placeholder="Tu email" autocomplete="email" required>
                  </section>
                  <section class="bloq3">
-                     <label for="submit" class="formularioTexto">Tel</label>
-                     <input type="number" class="formulario formularioEnviar"  placeholder=" número">
+                     <label for="telefono" class="formularioTexto">Teléfono</label>
+                     <input type="tel" id="telefono" name="telefono" class="formularioEnviar" placeholder="Tu teléfono" autocomplete="tel">
                  </section>
                  <section class="bloq4">
-                     <label for="submit" class="formularioTexto">Ciudad</label>
-                     <input type="text" class="formulario formularioEnviar"  placeholder=" ciudad">
+                     <label for="ciudad" class="formularioTexto">Ciudad</label>
+                     <input type="text" id="ciudad" name="ciudad" class="formularioEnviar" placeholder="Tu ciudad" autocomplete="address-level2">
                  </section>
                 <button type="submit" id="botonLanding">ENVIAR</button>
             </form>
@@ -89,9 +89,9 @@
         <details id="acordeonPie">
             <summary id="contenedorMenu">Menu</summary>
              <ul id="menuInferior">
-            <li class="menuLista"><a href="/index.html#cabecera"class="textoMenuInf">Inicio</a></li>
-            <li class="menuLista"><a href="/index.html#cuerpo"class="textoMenuInf">Productos</a></li>
-            <li class="menuLista"><a href="/index.html#logo1"class="textoMenuInf">Contacto</a></li>
+            <li class="menuLista"><a href="index.html#cabecera" class="textoMenuInf">Inicio</a></li>
+            <li class="menuLista"><a href="index.html#cuerpo" class="textoMenuInf">Productos</a></li>
+            <li class="menuLista"><a href="index.html#pieWeb" class="textoMenuInf">Contacto</a></li>
             </ul>
         </details>
 
@@ -100,10 +100,10 @@
         <p id="textoRedes">Síguenos en redes</p>
         <div id="separadorPie"></div>
         <figure id="contenedorLogos">
-            <a href="https://www.youtube.com/" target="_blank"><img src="/img/youtube.png" alt="" class="logo1 logosRedes" id="logosRedes1"></a>
-            <a href="https://www.tiktok.com/es-419/" target="_blank"><img src="/img/tik-tok.png" alt="" class="logo2 logosRedes" id="logosRedes2"></a>
-            <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Des_ES" target="_blank"><img src="/img/facebook.png" alt="" class="logo3 logosRedes" id="logosRedes3"></a>
-            <a href="https://www.instagram.com/" target="_blank"><img src="/img/instagram.png" alt="" class="logo4 logosRedes" id="logosRedes4"></a>
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="img/youtube.png" alt="" class="logo1 logosRedes" id="logosRedes1"></a>
+            <a href="https://www.tiktok.com/es-419/" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><img src="img/tik-tok.png" alt="" class="logo2 logosRedes" id="logosRedes2"></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="img/facebook.png" alt="" class="logo3 logosRedes" id="logosRedes3"></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="img/instagram.png" alt="" class="logo4 logosRedes" id="logosRedes4"></a>
         </figure>
 
 

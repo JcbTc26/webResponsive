@@ -342,3 +342,60 @@
 
 
 }
+
+/* Ajustes fluidos: mantienen el contenido legible sin depender de tamaños fijos. */
+@media (max-width: 767px) {
+    #cuerpo {
+        grid-template-columns: 1fr;
+    }
+
+    #contenedorFotos {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .fotoMovil {
+        width: 48%;
+        padding: 0.25rem;
+    }
+
+    .menuSup {
+        border-radius: 0.75rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #cuerpo {
+        max-width: var(--ancho-contenido);
+    }
+
+    #contenedorFoto {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-align: left;
+    }
+
+    #contenedorFoto #contenedorFotos {
+        grid-row: span 3;
+    }
+
+    #contenedorFoto #tituloFoto,
+    #contenedorFoto #textoFoto,
+    #contenedorFoto #botonFoto {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media (min-width: 1100px) {
+    #cuerpo {
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    }
+
+    #contenedorFoto {
+        grid-column: auto;
+    }
+}

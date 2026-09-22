@@ -9,32 +9,33 @@
         }
 
         body {
-            
             width: 100%;
-            /* overflow: hidden; */
+            min-width: 320px;
+            overflow-x: hidden;
             font-family: "Roboto Mono", monospace;
             font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
-            background-color: #DFDFDF;
+            background-color: var(--color-fondo);
+            color: var(--color-texto);
         }
       
              /*----- ESTILOS CABECERA WEB------ */
         #cabecera {
             width: 100%;
-            min-height: clamp(400px, 60svh, 800px);
+            min-height: min(48rem, 92svh);
             height: auto;
-            background-image: url(/img/HEROWEB.webp);
+            background-image: linear-gradient(180deg, rgba(11, 35, 33, 0.18), rgba(11, 35, 33, 0.72)), url(../img/HEROWEB.webp);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            padding: 10px 10px;
+            padding: 0.75rem clamp(1rem, 4vw, 3rem) 2.5rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 5px 0px gray;
-            gap: 2rem;
+            box-shadow: inset 0 -1px rgba(255, 255, 255, 0.15);
+            gap: 1.5rem;
         }
 
 
@@ -96,14 +97,15 @@
             width: 100%;
             height: auto;
             padding: 0.1rem;
-            background: rgba(87, 87, 87, 0.836);
+            background: rgba(15, 45, 42, 0.78);
             display: flex;
             align-items: center;
             justify-content: space-between;
             position: sticky;
-            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 999px;
             top: 5px;
-            box-shadow: 0 5px 10px gray;
+            box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.2);
         }
 
           .menuSuperior {
@@ -187,15 +189,18 @@
         
         #tituloWeb {
             text-align: center;
-            font-size: clamp(2.5rem, 4vw, 4rem);
+            max-width: 42rem;
+            font-size: clamp(3.25rem, 10vw, 7rem);
+            line-height: 0.95;
             color: white;
             text-shadow:  0 5px 8px rgba(229, 229, 229, 0.597);
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
          #subtitulo {
-            width: 80%;
+            width: min(100%, 48rem);
             text-align: center;
-            font-size: clamp(0.8rem, 3vw, 4rem);
+            font-size: clamp(1rem, 2.4vw, 1.5rem);
+            line-height: 1.6;
             font-weight: 300;
             color: white;
             text-shadow:  0 2px 10px rgb(0, 0, 0);
@@ -206,13 +211,14 @@
         #cuerpo {
             width: 100%;
             min-height: 50vh;
-            background-color: var(--color-superficie);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            max-width: var(--ancho-contenido);
+            margin: 0 auto;
+            background-color: var(--color-fondo);
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             text-align: center;
-            padding: 1rem;
-            gap: 10px;
+            padding: clamp(2rem, 6vw, 5rem) 1rem;
+            gap: 1.25rem;
         }
 
         #contenedorCta,
@@ -221,19 +227,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgb(82, 82, 82);
-            border: 2px var(--color-borde) solid;
-            padding: 1.5rem;
-            gap: 10px;
-            border-radius: 0.5rem;
-            box-shadow: 0 5px 10px gray;
+            background-color: var(--color-superficie-oscura);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: clamp(1.5rem, 4vw, 3rem);
+            gap: 1rem;
+            border-radius: var(--radio);
+            box-shadow: 0 1rem 2.5rem var(--color-sombra);
         }
 
         #tituloCta,
         #tituloFoto {
             width: 80%;
             color: white;
-            font-size: 1.2rem;
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
         }
 
         #textoCta,
@@ -241,7 +247,8 @@
             width: 80%;
             color: white;
             text-align: center;
-            font-size: 0.7rem;
+            font-size: clamp(0.85rem, 1.5vw, 1rem);
+            line-height: 1.7;
             margin-bottom: 2rem;
         }
 
@@ -251,16 +258,16 @@
             width: fit-content;
             max-width: 80%;
             color: white;
-            background: linear-gradient(135deg, #000000, #3a3a3a);
+            background: var(--color-acento);
             padding: 0.75rem 1.2rem;
-            border-radius: 999px;
+            border-radius: 0.6rem;
             border: 1px solid var(--color-borde);
             font-size: 0.8rem;
             font-weight: 700;
             letter-spacing: 0.08rem;
             text-transform: uppercase;
             box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
-            transition: 
+            transition:
             transform 0.3s ease,
             box-shadow 0.3s ease,
             color 0.3s ease;
@@ -268,14 +275,16 @@
 
         #botonCta:hover,
         .botonFoto:hover {
-            background-color:var(--color-texto-suave);
-            color:var(--color-fondo);
+            background-color: var(--color-acento-hover);
+            color: white;
+            transform: translateY(-2px);
         }
         
         .fotoMovil{
-            max-width: 90%;
-            border-radius: 30px;
-            padding: 1rem;
+            width: 50%;
+            max-width: 15rem;
+            border-radius: 1rem;
+            padding: 0.5rem;
         }
         /* ESTILOS PIE DE PAGINA */
         #pieWeb {
@@ -284,7 +293,9 @@
             flex-direction: column;
             align-items: center;
             gap: 1rem;
-            background-color: var(--color-fondo);
+            background-color: var(--color-superficie-oscura);
+            color: white;
+            padding: 3rem 1rem 1.5rem;
         }
 
         /* -----MANU INFERIOR----- */

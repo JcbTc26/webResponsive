@@ -1,21 +1,11 @@
+// La galería solo se inicializa cuando la página ya tiene todos sus elementos.
 document.addEventListener("DOMContentLoaded", function () {
     const botonesAbrirGaleria = document.querySelectorAll(".abrirGaleria");
     const botonCerrarGaleria = document.getElementById("botonCerrarGaleria");
     const galeriaDisenos = document.getElementById("galeriaDisenos");
     const contenedorFoto = document.getElementById("contenedorFoto");
 
-    if (botonesAbrirGaleria.length === 0) {
-        console.error("No existe ningún botón con la clase '.abrirGaleria'");
-        return;
-    }
-
-    if (!botonCerrarGaleria) {
-        console.error("No existe el botón con id='botonCerrarGaleria'");
-        return;
-    }
-
-    if (!galeriaDisenos) {
-        console.error("No existe la sección con id='galeriaDisenos'");
+    if (botonesAbrirGaleria.length === 0 || !botonCerrarGaleria || !galeriaDisenos) {
         return;
     }
 
@@ -42,6 +32,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 behavior: "smooth",
                 block: "start"
             });
+        }
+    });
+
+    document.addEventListener("keydown", function (evento) {
+        if (evento.key === "Escape" && !galeriaDisenos.classList.contains("oculto")) {
+            botonCerrarGaleria.click();
         }
     });
 });
